@@ -33,40 +33,8 @@ function RecentBlog({ blog }: any) {
           </div>
         </Animation>
 
-        <div className=" md:hidden ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {blog.slice(0, 3).map((blog: any, index: number) => (
-              <div key={blog.id}>
-                <Animation
-                  animation={index < 4 ? "fadeInRight" : "fadeInLeft"}
-                  rootMargin="-200px"
-                >
-                  <article className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500">
-                    <Link href={`blog/${blog.id}`}>
-                      <div className="relative">
-                        <img
-                          src={blog.photo.url}
-                          alt={blog.title}
-                          className="w-full h-64 object-cover"
-                        />
-                        <div className="p-6">
-                          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold h-24">
-                            {blog.title}
-                          </h3>
-                          <p className="text-xs sm:text-sm md:text-base text-gray-600">
-                            {formatDate(blog.publishedAt)}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  </article>
-                </Animation>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className=" hidden md:block ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {blog.slice(0, 8).map((blog: any, index: number) => (
               <div key={blog.id}>
                 <Animation
@@ -75,17 +43,17 @@ function RecentBlog({ blog }: any) {
                 >
                   <article className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500">
                     <Link href={`blog/${blog.id}`}>
-                      <div className="relative">
+                      <div className=" flex md:block h-40 sm:h-48 md:h-auto">
                         <img
                           src={blog.photo.url}
                           alt={blog.title}
-                          className="w-full h-64 object-cover"
+                          className="w-[40%] md:w-full md:h-64 object-cover"
                         />
-                        <div className="p-6">
-                          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold h-24">
+                        <div className="w-[60%] md:w-full p-4 relative">
+                          <h3 className="text-lg md:text-xl font-semibold h-24">
                             {blog.title}
                           </h3>
-                          <p className="text-xs sm:text-sm md:text-base text-gray-600">
+                          <p className="text-xs sm:text-sm md:text-base text-gray-600 absolute bottom-5">
                             {formatDate(blog.publishedAt)}
                           </p>
                         </div>
