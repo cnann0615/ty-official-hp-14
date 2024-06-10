@@ -23,6 +23,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/gallery" className="hover:text-violet-300">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="hover:text-violet-300">
                   Blog
                 </Link>

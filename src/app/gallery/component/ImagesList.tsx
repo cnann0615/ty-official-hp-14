@@ -1,12 +1,10 @@
 "use client";
-import { formatDate } from "@/app/component/RecentBlog";
-
-import React, { useState } from "react";
 import Link from "next/link";
+import React, { useState } from "react";
 
-const ITEMS_PER_PAGE = 9;
+const ITEMS_PER_PAGE = 18;
 
-export default function BlogList({ blog }: any) {
+function ImagesList({ blog }: any) {
   // ページネーション関連
   const [currentPage, setCurrentPage] = useState(1);
   const handlePageChange = (pageNumber: number) => {
@@ -22,28 +20,17 @@ export default function BlogList({ blog }: any) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-colos-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
         {selectedBlogPosts.map((blog: any) => (
-          <article
-            key={blog.id}
-            className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500"
-          >
-            <Link href={`blog/${blog.id}`}>
-              <div className="relative">
-                <img
-                  src={blog.photo.url}
-                  alt={blog.title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold">{blog.title}</h3>
-                  <p className="text-sm text-gray-600">
-                    {formatDate(blog.publishedAt)}
-                  </p>
-                </div>
-              </div>
+          <div key={blog.id} className="">
+            <Link href={`gallery/${blog.id}`}>
+              <img
+                src={blog.photo.url}
+                alt={blog.title}
+                className="object-cover w-full h-full aspect-square border-4 border-black hover:border-yellow-500 "
+              />
             </Link>
-          </article>
+          </div>
         ))}
       </div>
       <div className="flex justify-center mt-8">
@@ -64,3 +51,5 @@ export default function BlogList({ blog }: any) {
     </>
   );
 }
+
+export default ImagesList;

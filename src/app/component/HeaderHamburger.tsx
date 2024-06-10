@@ -33,6 +33,13 @@ function HeaderHamburger() {
             Profile
           </Link>
           <Link
+            href="/gallery"
+            className="px-4 py-2 hover:bg-gray-900"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Gallery
+          </Link>
+          <Link
             href="/blog"
             className="px-4 py-2 hover:bg-gray-900"
             onClick={() => setIsOpen(!isOpen)}

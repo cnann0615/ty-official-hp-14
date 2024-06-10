@@ -23,7 +23,7 @@ function Header() {
           />
           <Link
             href="/"
-            className="text-3xl md:text-6xl font-bold italic hover:text-yellow-500"
+            className="text-3xl md:text-4xl xl:text-6xl font-bold italic hover:text-yellow-500"
           >
             Tetsuya Yamada
           </Link>
@@ -40,6 +40,12 @@ function Header() {
             className="hover:underline underline-offset-8 decoration-yellow-500 text-3xl font-bold"
           >
             Profile
+          </Link>
+          <Link
+            href="/gallery"
+            className="hover:underline underline-offset-8 decoration-yellow-500 text-3xl font-bold"
+          >
+            Gallery
           </Link>
           <Link
             href="/blog"
