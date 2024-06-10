@@ -16,8 +16,8 @@ export default function Profile() {
           ラクロス選手のカナダ挑戦🇨🇦
         </h1>
       </div>
-      <div className="flex flex-col lg:flex-row lg:space-x-8 mb-28 text-md md:text-xl">
-        <div className="lg:w-1/2">
+      <div className="flex flex-col xl:flex-row xl:space-x-8 mb-28 text-md md:text-xl">
+        <div className="xl:w-1/2">
           <Animation animation="fadeInLeft" rootMargin="-300px">
             <Image
               src={"/images/top/img9.jpg"}
@@ -29,7 +29,7 @@ export default function Profile() {
             />
           </Animation>
         </div>
-        <div className="lg:w-1/2 mt-8 lg:mt-0 text-left ">
+        <div className="xl:w-1/2 mt-8 xl:mt-0 text-left ">
           <Animation animation="fadeInRight" rootMargin="-300px">
             <table className=" hidden lg:block table-auto w-full border-collapse ">
               <tbody>
