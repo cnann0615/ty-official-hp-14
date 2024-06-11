@@ -8,7 +8,7 @@ function Contents({ blog }: any) {
       <img
         src={blog.photo.url}
         alt={blog.title}
-        className="w-auto h-auto mx-auto border-4 border-white"
+        className="w-auto h-auto mx-auto border-4 border-black"
       />
       <p className="text-white text-end">
         {formatDate(blog.publishedAt).split(" ")[0]}
