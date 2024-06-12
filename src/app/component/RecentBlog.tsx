@@ -21,7 +21,7 @@ function RecentBlog({ blog }: any) {
       <div className="w-full p-4">
         <Animation animation="rotateInUpLeft" rootMargin="-100px">
           <div className="md:flex gap-10 mb-8">
-            <h3 className="mb-6 md:mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold underline underline-offset-8 decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-12">
+            <h3 className="mb-6 md:mb-0 text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold underline underline-offset-8 decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-12">
               Recent Blog Posts
             </h3>
             <Link
