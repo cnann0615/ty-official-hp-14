@@ -7,6 +7,9 @@ export default async function Gallery() {
 
   return (
     <div className=" w-[95%] md:w-[90%] mx-auto mb-10">
+      <h1 className=" m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
+        🥍 Gallery 🥍
+      </h1>
       <ImagesList blog={blog}></ImagesList>
     </div>
   );
