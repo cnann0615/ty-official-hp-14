@@ -18,7 +18,7 @@ export default function Profile() {
       </div>
       <div className="flex flex-col xl:flex-row xl:space-x-8 mb-28 text-md md:text-xl">
         <div className="xl:w-1/2">
-          <Animation animation="fadeInLeft" rootMargin="-200px">
+          <Animation animation="fadeInLeft" rootMargin="-100px">
             <Image
               src={"/images/top/img9.jpg"}
               alt={"athlete"}
@@ -30,7 +30,7 @@ export default function Profile() {
           </Animation>
         </div>
         <div className="xl:w-1/2 mt-8 xl:mt-0 text-left ">
-          <Animation animation="fadeInRight" rootMargin="-200px">
+          <Animation animation="fadeInRight" rootMargin="-100px">
             <table className=" hidden lg:block table-auto w-full border-collapse ">
               <tbody>
                 <tr>
@@ -176,7 +176,7 @@ export default function Profile() {
         <h1 className=" text-3xl md:text-5xl font-bold my-20 text-yellow-400">
           キッカケ
         </h1>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <p>
             高校時代に所属していたテニス部では一度も団体戦に出たことがありません。
             <br />
@@ -186,13 +186,13 @@ export default function Profile() {
           </p>
           <br />
         </Animation>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <p>
             そんな過去がある弱い自分でも、大学から始めたスポーツでオリンピックメダリストになることを目指しています。
           </p>
           <br />
         </Animation>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <p className=" text-xl md:text-3xl ">
             <span className="block font-semibold">『夢中を大切に』</span>
             <br />
@@ -207,7 +207,7 @@ export default function Profile() {
           <br />
           <br />
         </Animation>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <p>
             目標達成に向けて挑戦する姿、成長や思考、環境が変化する過程を発信することで
             <br />
@@ -217,11 +217,11 @@ export default function Profile() {
           </p>
           <br />
         </Animation>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <p className="italic text-center mr-4">by Tetsuya.Y</p>
           <br />
         </Animation>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <div className="mb-6 flex justify-center">
             <Image
               src={"/images/top/img4.jpg"}
