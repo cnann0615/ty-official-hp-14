@@ -6,7 +6,7 @@ export default async function Gallery() {
   const blog = data.contents;
 
   return (
-    <div className=" w-[95%] md:w-[90%] mx-auto mb-10">
+    <div className="  container p-5 mx-auto mb-10">
       <h1 className=" m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
         🥍 Gallery 🥍
       </h1>
