@@ -8,7 +8,7 @@ import Link from "next/link";
 function Message() {
   return (
     <div className=" text-gray-100 font-bold mt-10 mb-16 md:mb-36 ">
-      <Animation animation="fadeInUp" rootMargin="-200px">
+      <Animation animation="fadeInUp" rootMargin="-100px">
         <h1 className=" -mb-[120px] xl:-mb-[30px] mt-16 sm:mt-28 text-center text-lg sm:text-4xl lg:text-5xl xl:text-7xl ">
           ”人はいつからでも、何にでもなれる。”
         </h1>
@@ -19,7 +19,7 @@ function Message() {
             <Earth />
           </div>
           <div className=" text-center xl:text-left absolute  top-[35%] lg:top-[40%] xl:top-[34%] left-0 xl:ml-24">
-            <Animation animation="fadeInUp" rootMargin="-200px">
+            <Animation animation="fadeInUp" rootMargin="-100px">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
                 新卒入社後
                 <span className="text-yellow-500">9ヶ月で退職</span>し
@@ -38,7 +38,7 @@ function Message() {
         </div>
       </div>
       <div>
-        <Animation animation="fadeInUp" rootMargin="-200px">
+        <Animation animation="fadeInUp" rootMargin="-100px">
           <div className=" xl:flex  -mt-[140px]  xl:-mt-[180px] z-10">
             <div className=" mb-20 lg:mb-36 w-full xl:w-1/2 flex items-center justify-center ">
               <div className=" md:hidden relative">
@@ -113,7 +113,7 @@ function Message() {
 
         <div className=" xl:flex">
           <div className="w-full xl:w-1/2">
-            <Animation animation="zoomIn" rootMargin="-200px">
+            <Animation animation="zoomIn" rootMargin="-100px">
               <Image
                 src="/images/top/img3.jpeg"
                 alt="Athlete"
@@ -126,7 +126,7 @@ function Message() {
           </div>
           <div className="w-full xl:w-1/2 xl:pl-20 mt-20 xl:mt-0 flex items-center ">
             <div className=" mx-auto xl:mx-0 text-center xl:text-left">
-              <Animation animation="fadeInUp" rootMargin="-200px">
+              <Animation animation="fadeInUp" rootMargin="-100px">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
                   目標達成に向けて
                   <br />
