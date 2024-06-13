@@ -17,7 +17,7 @@ function Main() {
       <div className=" absolute bottom-4 left-2">
         <TimeFadeIn time="500">
           <div className=" animate-slide-in-left">
-            <h1 className="text-white text-2xl sm:text-4xl lg:text-6xl xl:text-8xl font-bold underline italic decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-16">
+            <h1 className="text-white text-[22px] sm:text-4xl lg:text-6xl xl:text-8xl font-bold underline italic decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-16">
               夢を持ち、
               <br />
               実現に向け一歩踏み出す勇気！！

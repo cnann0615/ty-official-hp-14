@@ -18,22 +18,28 @@ function Message() {
           <div className=" md:truncate">
             <Earth />
           </div>
-          <div className=" text-center xl:text-left absolute  top-[35%] lg:top-[40%] xl:top-[34%] left-0 xl:ml-24">
+          <div className=" text-center xl:text-left absolute  top-[35%] sm:top-[40%] xl:top-[34%] xl:ml-24">
             <Animation animation="fadeInUp" rootMargin="-100px">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
-                新卒入社後
-                <span className="text-yellow-500">9ヶ月で退職</span>し
-                <br />
-                <span className="text-yellow-500">カナダ🇨🇦</span>に出発。
-                <br />
-                半年間、日本を離れ、
-                <br />
-                国を超え、
-                <span className="text-yellow-500">ラクロスの本場</span>
-                である
-                <br className="xl:hidden" />
-                <span className="text-yellow-500">カナダ</span>
-                での修行を決意。
+                <div className="inline-block xl:block">
+                  新卒入社後
+                  <span className="text-yellow-500">9ヶ月で退職</span>し
+                </div>
+                <div className="inline-block xl:block">
+                  <span className="text-yellow-500">カナダ🇨🇦</span>に出発。
+                </div>
+                <div className="inline-block xl:block">
+                  半年間、日本を離れ、
+                </div>
+                <div className="inline-block xl:inline">
+                  国を超え、
+                  <span className="text-yellow-500">ラクロスの本場</span>
+                  である
+                </div>
+                <div className="inline-block xl:inline">
+                  <span className="text-yellow-500">カナダ</span>
+                  での修行を決意。
+                </div>
               </h1>
             </Animation>
           </div>
