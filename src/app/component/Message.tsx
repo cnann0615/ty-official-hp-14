@@ -30,7 +30,9 @@ function Message() {
                 <br />
                 国を超え、
                 <span className="text-yellow-500">ラクロスの本場</span>
-                である<span className="text-yellow-500">カナダ</span>
+                である
+                <br className="xl:hidden" />
+                <span className="text-yellow-500">カナダ</span>
                 での修行を決意。
               </h1>
             </Animation>
