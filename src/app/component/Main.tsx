@@ -2,8 +2,10 @@
 import { TimeFadeIn } from "./Animation";
 import { ImageSlider } from "./ImageSlider";
 
+// トップページのメイン画像部分
+
 function Main() {
-  // メイン画像
+  // スライドショーに利用する画像
   const images = [
     "/images/top/img4.jpg",
     "/images/top/img5.jpg",
@@ -12,9 +14,11 @@ function Main() {
   return (
     <div className=" relative">
       <div className=" w-full ">
+        {/* 画像スライドショーコンポーネントにimagesを渡す */}
         <ImageSlider images={images} />
       </div>
       <div className=" absolute bottom-4 left-2">
+        {/* 画像上のメッセージを0.5秒後に表示する */}
         <TimeFadeIn time="500">
           <div className=" animate-slide-in-left">
             <h1 className="text-white text-[22px] sm:text-4xl lg:text-6xl xl:text-8xl font-bold underline italic decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-16">

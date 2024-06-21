@@ -5,16 +5,22 @@ import { Animation } from "./Animation";
 import Image from "next/image";
 import Link from "next/link";
 
+// トップページのメッセージ部分
+
 function Message() {
   return (
     <div className=" text-gray-100 font-bold mt-10 mb-16 md:mb-36 ">
+      {/* メッセージ１ */}
       <Animation animation="fadeInUp" rootMargin="-100px">
         <h1 className=" -mb-[120px] xl:-mb-[30px] mt-16 sm:mt-28 text-center text-lg sm:text-4xl lg:text-5xl xl:text-7xl ">
           ”人はいつからでも、何にでもなれる。”
         </h1>
       </Animation>
+
+      {/* メッセージ２ */}
       <div className="mb-12 xl:mb-24 z-0">
         <div className=" relative ">
+          {/* 3Dモデル */}
           <div className=" md:truncate">
             <Earth />
           </div>
@@ -45,10 +51,13 @@ function Message() {
           </div>
         </div>
       </div>
+
+      {/* メッセージ３ */}
       <div>
         <Animation animation="fadeInUp" rootMargin="-100px">
           <div className=" xl:flex  -mt-[140px]  xl:-mt-[180px] z-10">
             <div className=" mb-20 lg:mb-36 w-full xl:w-1/2 flex items-center justify-center ">
+              {/* 画像サイズがmd以下の時 */}
               <div className=" md:hidden relative">
                 <Link href={"/gallery"} className="">
                   <Image
@@ -67,11 +76,14 @@ function Message() {
                     height={190}
                     className="rounded-xl border-4 border-black -rotate-12"
                   ></Image>
+                  {/* ホバーされた時に薄暗くするための要素 */}
                   <div className=" flex items-center justify-center bg-black w-[290px] h-[430px] rounded-xl -rotate-12 absolute top-0 left-0 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 z-20">
                     <h2 className=" text-5xl rotate-12">Gallery</h2>
                   </div>
                 </Link>
               </div>
+
+              {/* 画像サイズがmd以上の時 */}
               <div className=" hidden md:block relative">
                 <Link href="/gallery" className="relative inline-block">
                   <div className="relative">
@@ -90,6 +102,7 @@ function Message() {
                       height={300}
                       className="rounded-xl border-4 border-black -rotate-12"
                     />
+                    {/* ホバーされた時に薄暗くするための要素 */}
                     <div className=" flex items-center justify-center bg-black w-[400px] h-[596px] rounded-xl -rotate-12 absolute top-0 left-0 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 z-20">
                       <h2 className=" text-5xl rotate-12 ">Gallery</h2>
                     </div>
@@ -119,6 +132,7 @@ function Message() {
           </div>
         </Animation>
 
+        {/* メッセージ４ */}
         <div className=" xl:flex">
           <div className="w-full xl:w-1/2">
             <Animation animation="zoomIn" rootMargin="-100px">

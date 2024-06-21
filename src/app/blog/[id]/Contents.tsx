@@ -1,5 +1,7 @@
 import React from "react";
 
+// ブログ表示部分
+
 function Contents({ blog }: any) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6">

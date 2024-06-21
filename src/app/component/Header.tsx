@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderHamburger from "./HeaderHamburger";
 
+// ヘッダー
+
 function Header() {
   return (
     <header className="text-black hadow-md">
