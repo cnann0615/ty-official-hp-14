@@ -7,6 +7,7 @@ function Header() {
     <header className="text-black hadow-md">
       <div className="container mx-auto px-3 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
+          {/* ロゴ１ */}
           <Image
             src="/images/top/img11.png"
             alt="teamIcon"
@@ -14,6 +15,7 @@ function Header() {
             height={100}
             className="hidden lg:block w-24 h-24"
           />
+          {/* ロゴ２ */}
           <Image
             src="/images/top/img12.jpeg"
             alt="teamIcon"
@@ -21,6 +23,7 @@ function Header() {
             height={100}
             className="hidden lg:block w-24 h-24"
           />
+          {/* メインタイトル */}
           <Link
             href="/"
             className="text-4xl xl:text-6xl font-bold hover:text-yellow-500"
@@ -28,6 +31,7 @@ function Header() {
             Tetsuya Yamada
           </Link>
         </div>
+        {/* メニューバー（画面サイズがlg以上の時) */}
         <nav className="hidden lg:flex space-x-8">
           <Link
             href="/"
@@ -60,6 +64,7 @@ function Header() {
             Contact
           </Link>
         </nav>
+        {/* ハンバーガーメニュー（画面サイズがlg以下の時） */}
         <HeaderHamburger />
       </div>
     </header>
