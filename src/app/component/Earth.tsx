@@ -2,10 +2,11 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
+// ３Dモデル
+
 function Earth() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  // 3Dモデル関連
   useEffect(() => {
     const canvas = canvasRef.current as HTMLCanvasElement;
 
@@ -53,7 +54,8 @@ function Earth() {
 
     const tick = () => {
       if (model) {
-        model.rotation.y += 0.0025; // Y軸周りに毎フレーム回転
+        // Y軸周りに毎フレーム回転（数字はスピード）
+        model.rotation.y += 0.0025;
       }
       renderer.render(scene, camera);
       requestAnimationFrame(tick);

@@ -3,20 +3,29 @@ import { Animation } from "../component/Animation";
 import React from "react";
 import Image from "next/image";
 
+// プロフィールページ
+
 export default function Profile() {
   return (
     <div className="container mx-auto px-4 mb-28">
+      {/* タイトル */}
       <div className="text-center mt-12 mb-16 md:mb-24">
+        {/* 画面サイズがmd以上の時 */}
         <h1 className=" hidden md:block text-4xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 ">
           2028 LAオリンピックを目指すラクロス選手のカナダ挑戦🇨🇦
         </h1>
+
+        {/* 画面サイズがmd以下の時 */}
         <h1 className="md:hidden text-xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 ">
           2028 LAオリンピックを目指す
           <br />
           ラクロス選手のカナダ挑戦🇨🇦
         </h1>
       </div>
+
+      {/* プロフィール画像＋プロフィール */}
       <div className="flex flex-col xl:flex-row xl:space-x-8 mb-28 text-md md:text-xl">
+        {/* プロフィール画像 */}
         <div className="xl:w-1/2">
           <Animation animation="fadeInLeft" rootMargin="-100px">
             <Image
@@ -29,8 +38,10 @@ export default function Profile() {
             />
           </Animation>
         </div>
+        {/* プロフィール */}
         <div className="xl:w-1/2 mt-8 xl:mt-0 text-left ">
           <Animation animation="fadeInRight" rootMargin="-100px">
+            {/* 画面サイズがlg以上の時 */}
             <table className=" hidden lg:block table-auto w-full border-collapse ">
               <tbody>
                 <tr>
@@ -90,6 +101,8 @@ export default function Profile() {
                 </tr>
               </tbody>
             </table>
+
+            {/* 画面サイズがlg以下の時 */}
             <div className=" lg:hidden table-auto w-full border-collapse ">
               <div>
                 <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
@@ -169,13 +182,18 @@ export default function Profile() {
           </Animation>
         </div>
       </div>
+
+      {/* メッセージ */}
       <div
         className="space-y-8 text-center text-lg md:text-2xl"
         style={{ lineHeight: "2em" }}
       >
+        {/* タイトル */}
         <h1 className=" text-3xl md:text-5xl font-bold my-20 text-yellow-400">
           キッカケ
         </h1>
+
+        {/* 内容 */}
         <Animation animation="fadeInUp" rootMargin="-100px">
           <p>
             高校時代に所属していたテニス部では一度も団体戦に出たことがありません。

@@ -2,20 +2,27 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
+// アニメーション
+
+// 時差フェードイン
+
+// 何秒後にフェードインするかを引数timeで受け取る
 export const TimeFadeIn = ({ children, time }: any) => {
+  // time秒後にtrueとする
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    // コンポーネントがマウントされた後、3秒後に isVisibleをtrue に設定
+    // コンポーネントがマウントされた後、time秒後に isVisibleをtrue に設定
     const timer = setTimeout(() => {
       setInView(true);
-    }, time); // 500ミリ秒 = 0.5秒
+    }, time);
 
     // コンポーネントがアンマウントされた際にタイマーをクリア
     return () => clearTimeout(timer);
   }, []);
 
   return (
+    // inViewがtrueになったらopacity-100となり表示される
     <div
       className={`${
         inView ? "opacity-100" : "opacity-0 translate-x-[-50%]"
@@ -26,6 +33,9 @@ export const TimeFadeIn = ({ children, time }: any) => {
   );
 };
 
+// css animate（スクロールに応じて発火系）
+
+// アニメーションの種類（animation)と、どのくらいスクロールした時に発火させるか(rootMargin)を引数で受け取る
 export const Animation = ({
   children,
   animation,
@@ -35,16 +45,19 @@ export const Animation = ({
   animation: string;
   rootMargin: string;
 }) => {
+  // ref要素(以下のdivタグ)がrootMarginに来た時点で、inViewがtrueになる
   const { ref, inView } = useInView({
-    // オプション
+    // ここに位置を設定
     rootMargin: rootMargin,
-    triggerOnce: true, // 最初の一度だけ実行
+    // 最初の一度だけ実行
+    triggerOnce: true,
   });
 
   return (
     <div
       ref={ref}
       className={`${
+        // inViewがtrueになったら、引数で受け取ったアニメーションを使用して要素を表示
         inView ? "animate__animated animate__" + animation : "opacity-0"
       } `}
     >

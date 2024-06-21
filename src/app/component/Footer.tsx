@@ -2,11 +2,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// フッター
+
 function Footer() {
   return (
     <footer className="bg-violet-900 text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* メニュー */}
           <div>
             <h3 className="text-xl underline decoration-yellow-500 mb-4">
               Menu
@@ -39,6 +42,7 @@ function Footer() {
               </li>
             </ul>
           </div>
+          {/* SNSリンク */}
           <div className="space-y-4">
             <h3 className="text-xl underline decoration-yellow-500 mb-4">
               Follow Me!!
@@ -65,6 +69,7 @@ function Footer() {
               </a>
             </div>
           </div>
+          {/* 問い合わせ先 */}
           <div className="space-y-4">
             <h3 className="text-xl underline decoration-yellow-500 mb-4">
               Contact Info
