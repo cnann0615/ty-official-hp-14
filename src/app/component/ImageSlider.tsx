@@ -35,6 +35,7 @@ export const ImageSlider = ({ images }: { images: string[] }) => {
             layout="fill"
             objectFit="cover"
             className="border-4 border-black rounded-xl"
+            priority={true}
           />
         </div>
       ))}

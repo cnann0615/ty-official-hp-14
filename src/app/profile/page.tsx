@@ -35,6 +35,7 @@ export default function Profile() {
               width={700}
               height={500}
               className="rounded-lg shadow-lg border-4 border-black"
+              priority={true}
             />
           </Animation>
         </div>
