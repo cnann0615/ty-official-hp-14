@@ -1,13 +1,15 @@
-"use client";
-import { Animation, TimeFadeIn } from "../component/Animation";
-
-import React, { useEffect, useState } from "react";
+import { Animation } from "../component/Animation";
+import React, { useState } from "react";
 import Image from "next/image";
-import { ImageSlider } from "../component/ImageSlider";
 
 // プロフィールページ
 
 export default function Profile() {
+  画像読み込みの未済をStateで管理;
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
   return (
     <div className="container mx-auto px-4 mb-28">
       {/* タイトル */}
@@ -29,7 +31,7 @@ export default function Profile() {
       <div className="flex flex-col xl:flex-row xl:space-x-8 mb-28 text-md md:text-xl">
         {/* プロフィール画像 */}
         <div className="xl:w-1/2">
-          <TimeFadeIn time="500" direction="left">
+          <Animation animation="fadeInLeft" rootMargin="-100px">
             <Image
               src={"/images/top/img9.jpg"}
               alt={"athlete"}
@@ -39,11 +41,11 @@ export default function Profile() {
               className="rounded-lg shadow-lg border-4 border-black"
               priority={true}
             />
-          </TimeFadeIn>
+          </Animation>
         </div>
         {/* プロフィール */}
         <div className="xl:w-1/2 mt-8 xl:mt-0 text-left ">
-          <TimeFadeIn time="500" direction="right">
+          <Animation animation="fadeInRight" rootMargin="-100px">
             {/* 画面サイズがlg以上の時 */}
             <table className=" hidden lg:block table-auto w-full border-collapse ">
               <tbody>
@@ -182,7 +184,7 @@ export default function Profile() {
               </div>
               <div></div>
             </div>
-          </TimeFadeIn>
+          </Animation>
         </div>
       </div>
 

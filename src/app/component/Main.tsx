@@ -19,8 +19,8 @@ function Main() {
       </div>
       <div className=" absolute bottom-4 left-2">
         {/* 画像上のメッセージを0.5秒後に表示する */}
-        <TimeFadeIn time="500">
-          <div className=" animate-slide-in-left">
+        <TimeFadeIn time="500" direction="left">
+          <div>
             <h1 className="text-white text-[22px] sm:text-4xl lg:text-6xl xl:text-8xl font-bold underline italic decoration-yellow-500 decoration-4 sm:decoration-8 lg:decoration-16">
               夢を持ち、
               <br />
