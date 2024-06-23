@@ -4,11 +4,25 @@ import Image from "next/image";
 import "animate.css";
 
 // 画像スライドショー
-
-// スライドショーする画像のパスを配列で受け取る
 export const ImageSlider = ({ images }: { images: string[] }) => {
-  // 表示する画像のindexを管理
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // 画像読み込みの未済をStateで管理
+  const [imageLoaded, setImageLoaded] = useState<boolean[]>([]);
+
+  // 画像読み込み状態の初期化
+  useEffect(() => {
+    setImageLoaded(new Array(images.length).fill(false));
+  }, [images]);
+
+  // 画像読み込みが完了したらこのメソッドが呼ばれる（CSSアニメーションが動く）
+  const handleImageLoad = (index: number) => {
+    setImageLoaded((prevLoaded) => {
+      const newLoaded = [...prevLoaded];
+      newLoaded[index] = true;
+      return newLoaded;
+    });
+  };
 
   useEffect(() => {
     // 4秒おきに画像を切り替える（現在のindex+1を画像の数で割ることでループする）
@@ -21,12 +35,13 @@ export const ImageSlider = ({ images }: { images: string[] }) => {
 
   return (
     <div className="w-full h-[250px] md:h-[400px] lg:h-[800px]">
-      {/* 画像を展開し、indexがcurrentImageIndexと一致した場合にopacity-100となり画像が表示される。 */}
       {images.map((image: string, index: number) => (
         <div
           key={index}
           className={`transition-opacity duration-1000 ${
-            index === currentImageIndex ? "opacity-100" : "opacity-0"
+            index === currentImageIndex && imageLoaded[index]
+              ? "opacity-100"
+              : "opacity-0"
           }`}
         >
           <Image
@@ -35,6 +50,7 @@ export const ImageSlider = ({ images }: { images: string[] }) => {
             layout="fill"
             objectFit="cover"
             className="border-4 border-black rounded-xl"
+            onLoadingComplete={() => handleImageLoad(index)}
             priority={true}
           />
         </div>

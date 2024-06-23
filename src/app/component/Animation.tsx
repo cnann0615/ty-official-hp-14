@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 // アニメーション
 
-// 時差フェードイン
+// 時差フェードイン（引数directionで左フェードインか右フェードインか決定）
 
 // 何秒後にフェードインするかを引数timeで受け取る
-export const TimeFadeIn = ({ children, time }: any) => {
+export const TimeFadeIn = ({ children, time, direction }: any) => {
   // time秒後にtrueとする
   const [inView, setInView] = useState(false);
 
@@ -24,9 +24,8 @@ export const TimeFadeIn = ({ children, time }: any) => {
   return (
     // inViewがtrueになったらopacity-100となり表示される
     <div
-      className={`${
-        inView ? "opacity-100" : "opacity-0 translate-x-[-50%]"
-      } duration-[1s]`}
+      className={`${inView ? "opacity-100" : `opacity-0 ${direction === "right" ? "translate-x-[50%]" : "translate-x-[-50%]"}`} 
+      duration-[1s]`}
     >
       {children}
     </div>
