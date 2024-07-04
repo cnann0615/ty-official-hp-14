@@ -1,9 +1,7 @@
 "use client";
-import { Animation, TimeFadeIn } from "../component/Animation";
+import { Animation, TimeFadeIn } from "../components/Animation";
 
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { ImageSlider } from "../component/ImageSlider";
 
 // プロフィールページ
 
