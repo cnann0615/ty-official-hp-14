@@ -1,5 +1,5 @@
 import { client } from "../../../libs/client";
-import ImagesList from "./component/ImagesList";
+import ImagesList from "./ImagesList";
 
 // ギャラリーページ
 

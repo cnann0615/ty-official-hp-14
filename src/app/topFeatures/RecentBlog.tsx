@@ -1,5 +1,5 @@
 "use client";
-import { Animation } from "./Animation";
+import { Animation } from "../components/Animation";
 
 import Link from "next/link";
 

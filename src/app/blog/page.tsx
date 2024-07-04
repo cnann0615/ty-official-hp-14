@@ -1,5 +1,5 @@
 import { client } from "../../../libs/client";
-import BlogList from "./component/BlogList";
+import BlogList from "./BlogList";
 
 // ブログページ
 

@@ -1,6 +1,6 @@
 "use client";
-import { TimeFadeIn } from "./Animation";
-import { ImageSlider } from "./ImageSlider";
+import { TimeFadeIn } from "../components/Animation";
+import { ImageSlider } from "../components/ImageSlider";
 
 // トップページのメイン画像部分
 

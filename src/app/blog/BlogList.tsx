@@ -1,5 +1,5 @@
 "use client";
-import { formatDate } from "@/app/component/RecentBlog";
+import { formatDate } from "@/app/topFeatures/RecentBlog";
 
 import React, { useState } from "react";
 import Link from "next/link";
