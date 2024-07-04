@@ -1,6 +1,6 @@
 "use client";
 import Earth from "./Earth";
-import { Animation } from "./Animation";
+import { Animation } from "../component/Animation";
 
 import Image from "next/image";
 import Link from "next/link";

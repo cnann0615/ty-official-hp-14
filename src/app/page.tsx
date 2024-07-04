@@ -1,6 +1,6 @@
-import Main from "./component/Main";
-import Message from "./component/Message";
-import RecentBlog from "./component/RecentBlog";
+import Main from "./topFeatures/Main";
+import Message from "./topFeatures/Message";
+import RecentBlog from "./topFeatures/RecentBlog";
 import { client } from "../../libs/client";
 
 // トップページ
