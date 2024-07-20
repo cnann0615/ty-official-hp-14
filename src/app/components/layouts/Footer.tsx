@@ -6,8 +6,8 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="bg-violet-900 text-white py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="px-[2.5%] md:px-[5%] ">
+        <div className="flex gap-28 md:gap-40 px-8">
           {/* メニュー */}
           <div>
             <h3 className="text-xl underline decoration-yellow-500 mb-4">
@@ -67,14 +67,6 @@ function Footer() {
                 />
               </a>
             </div>
-          </div>
-          {/* 問い合わせ先 */}
-          <div className="space-y-4">
-            <h3 className="text-xl underline decoration-yellow-500 mb-4">
-              Contact Info
-            </h3>
-            <p>Email: contact@example.com</p>
-            <p>Phone: (123) 456-7890</p>
           </div>
         </div>
       </div>

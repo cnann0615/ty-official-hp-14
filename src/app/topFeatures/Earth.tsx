@@ -63,13 +63,7 @@ function Earth() {
     tick();
   }, []);
 
-  return (
-    <canvas
-      id="canvas"
-      ref={canvasRef}
-      className=" -m-[2.6%] xl:ml-96"
-    ></canvas>
-  );
+  return <canvas id="canvas" ref={canvasRef} className=" bg-gray-700"></canvas>;
 }
 
 export default Earth;

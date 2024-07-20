@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <div className="bg-[url('/images/bg/bg.jpeg')] text-white ">
+        <div className=" bg-[url('/images/bg/bg.jpeg')] text-white ">
           <Header />
           {children}
           <Footer />

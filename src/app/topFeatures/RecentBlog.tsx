@@ -45,7 +45,9 @@ function RecentBlog({ blog }: any) {
             {blog.slice(0, 8).map((blog: any, index: number) => (
               <div key={blog.id}>
                 <Animation
-                  animation={index < 4 ? "fadeInRight" : "fadeInLeft"}
+                  animation={
+                    index < 4 ? "rotateInDownRight" : "rotateInDownLeft"
+                  }
                   rootMargin="-100px"
                 >
                   <article className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500">

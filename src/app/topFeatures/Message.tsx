@@ -24,9 +24,9 @@ function Message() {
           <div className=" md:truncate">
             <Earth />
           </div>
-          <div className=" text-center xl:text-left absolute  top-[35%] sm:top-[40%] xl:top-[34%] xl:ml-24">
+          <div className=" w-full absolute  top-[35%] sm:top-[40%] xl:top-[34%] ">
             <Animation animation="fadeInUp" rootMargin="-100px">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
+              <h1 className=" text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
                 <div className="inline-block xl:block">
                   新卒入社後
                   <span className="text-yellow-500">9ヶ月で退職</span>し

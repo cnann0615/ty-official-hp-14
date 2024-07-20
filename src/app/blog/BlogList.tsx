@@ -1,8 +1,9 @@
 "use client";
-import { formatDate } from "@/app/topFeatures/RecentBlog";
-
 import React, { useState } from "react";
 import Link from "next/link";
+
+import { formatDate } from "@/app/topFeatures/RecentBlog";
+import { Animation } from "../components/Animation";
 
 // ブログリスト
 
@@ -36,28 +37,32 @@ export default function BlogList({ blog }: any) {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-colos-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
         {/* ブログ情報を展開 */}
-        {selectedBlogPosts.map((blog: any) => (
-          <article
-            key={blog.id}
-            className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500"
-          >
-            {/* 個々のブログへのリンク */}
-            <Link href={`blog/${blog.id}`}>
-              <div className="relative">
-                <img
-                  src={blog.photo.url}
-                  alt={blog.title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold">{blog.title}</h3>
-                  <p className="text-sm text-gray-600">
-                    {formatDate(blog.publishedAt)}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </article>
+        {selectedBlogPosts.map((blog: any, index: number) => (
+          <div key={blog.id}>
+            <Animation
+              animation={index < 5 ? "bounceInRight" : "bounceInLeft"}
+              rootMargin="-100px"
+            >
+              <article className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500">
+                {/* 個々のブログへのリンク */}
+                <Link href={`blog/${blog.id}`}>
+                  <div className="relative">
+                    <img
+                      src={blog.photo.url}
+                      alt={blog.title}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="p-6 h-40 relative">
+                      <h3 className="text-xl font-semibold">{blog.title}</h3>
+                      <p className="text-xs sm:text-sm md:text-base text-gray-600 absolute bottom-5">
+                        {formatDate(blog.publishedAt)}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </article>
+            </Animation>
+          </div>
         ))}
       </div>
       {/* ページネーション */}
