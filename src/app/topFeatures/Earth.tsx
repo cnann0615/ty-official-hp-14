@@ -11,8 +11,8 @@ function Earth() {
     const canvas = canvasRef.current as HTMLCanvasElement;
 
     const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: 438.75,
+      height: window.innerHeight / 2,
     };
 
     // scene
@@ -48,7 +48,7 @@ function Earth() {
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("/models/earth.gltf", (gltf) => {
       model = gltf.scene;
-      model.scale.set(0.1, 0.1, 0.1);
+      model.scale.set(0.14, 0.14, 0.14);
       scene.add(model);
     });
 
@@ -63,7 +63,13 @@ function Earth() {
     tick();
   }, []);
 
-  return <canvas id="canvas" ref={canvasRef} className=""></canvas>;
+  return (
+    <canvas
+      id="canvas"
+      ref={canvasRef}
+      className="  mx-auto  xl:ml-[65%] "
+    ></canvas>
+  );
 }
 
 export default Earth;

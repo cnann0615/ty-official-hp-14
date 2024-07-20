@@ -11,7 +11,7 @@ export default async function Home() {
   const blog = data.contents;
 
   return (
-    <main className="px-[2.5%] md:px-[5%] ">
+    <main className="px-[2.5%] md:px-[5%] mb-24">
       <Main />
       <Message />
       {/* 取得したブログ情報を渡す */}
