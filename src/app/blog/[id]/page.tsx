@@ -4,6 +4,9 @@ import Contents from "./Contents";
 
 // 個々のブログ
 
+// SSR設定（MicroCMS独自の書き方)
+export const revalidate = 0;
+
 export default async function Article(context: any) {
   let selectBlog = null;
   const id = context.params.id;
