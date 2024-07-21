@@ -9,22 +9,22 @@ import Link from "next/link";
 
 function Message() {
   return (
-    <div className=" text-gray-100 font-bold mt-10 mb-16 md:mb-36">
+    <div className=" text-gray-100 font-bold mt-10 mb-16 md:mb-24">
       {/* メッセージ１ */}
       <Animation animation="fadeInUp" rootMargin="-100px">
-        <h1 className=" mb-28 mt-28 text-center text-xl sm:text-4xl lg:text-5xl xl:text-7xl ">
+        <h1 className=" mt-16 md:mt-28 mb-8 md:mb-20 xl:my-28 text-center text-lg sm:text-4xl lg:text-5xl xl:text-7xl ">
           ”人はいつからでも、何にでもなれる。”
         </h1>
       </Animation>
 
       {/* メッセージ２ */}
-      <div className="mb-16 xl:mb-28 z-0">
+      <div className="mb-10 md:mb-28 z-0">
         <div className=" relative ">
           {/* 3Dモデル */}
-          <div className="">
+          <div>
             <Earth />
           </div>
-          <div className=" w-full absolute  top-[35%] lg:top-[25%] xl:top-[15%]  ">
+          <div className=" w-full absolute  top-[30%] lg:top-[20%] xl:top-[10%]  ">
             <Animation animation="fadeInUp" rootMargin="-100px">
               <h1 className=" text-center xl:text-left xl:ml-28 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl xl:leading-relaxed">
                 <div className="inline-block xl:block">
@@ -38,7 +38,7 @@ function Message() {
                   半年間、日本を離れ、
                 </div>
                 <div className="inline-block xl:inline">
-                  国を超え、
+                  国を超え
                   <span className="text-yellow-500">ラクロスの本場</span>
                   である
                 </div>
@@ -55,7 +55,7 @@ function Message() {
       {/* メッセージ３ */}
       <div>
         <Animation animation="fadeInUp" rootMargin="-100px">
-          <div className=" xl:flex  mt-28  z-10">
+          <div className=" xl:flex  mt-18 xl:mt-24  z-10">
             <div className=" mb-20 lg:mb-36 w-full xl:w-1/2 flex items-center justify-center ">
               {/* 画像サイズがmd以下の時 */}
               <div className=" md:hidden relative">

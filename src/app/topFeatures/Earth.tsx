@@ -11,8 +11,8 @@ function Earth() {
     const canvas = canvasRef.current as HTMLCanvasElement;
 
     const sizes = {
-      width: 438.75,
-      height: window.innerHeight / 2,
+      width: 350,
+      height: 370,
     };
 
     // scene
@@ -67,7 +67,7 @@ function Earth() {
     <canvas
       id="canvas"
       ref={canvasRef}
-      className="  mx-auto  xl:ml-[65%] "
+      className="  mx-auto  xl:ml-[67%]"
     ></canvas>
   );
 }
