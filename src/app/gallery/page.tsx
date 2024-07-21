@@ -4,18 +4,29 @@ import ImagesList from "./ImagesList";
 // ギャラリーページ
 
 export default async function Gallery() {
-  // microCMSからブログ情報を取得
-  const data = await client.get({ endpoint: "blog" });
-  const blog = data.contents;
+  let blog = [];
+  let error = null;
+
+  try {
+    // microCMSからブログ情報を取得
+    const data = await client.get({ endpoint: "blog" });
+    blog = data.contents;
+  } catch (err) {
+    console.error("Failed to fetch blog data:", err);
+    error = "Failed to fetch blog data. Please try again later.";
+  }
 
   return (
-    <div className="  container p-5 mx-auto mb-10">
+    <div className="container p-5 mx-auto mb-10">
       {/* タイトル */}
-      <h1 className=" m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
+      <h1 className="m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
         🥍 Gallery 🥍
       </h1>
-      {/* ブログ情報を渡す */}
-      <ImagesList blog={blog}></ImagesList>
+      {error ? (
+        <p className="text-red-500">{error}</p>
+      ) : (
+        <ImagesList blog={blog} />
+      )}
     </div>
   );
 }
