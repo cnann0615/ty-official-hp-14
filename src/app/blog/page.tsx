@@ -3,6 +3,9 @@ import BlogList from "./BlogList";
 
 // ブログページ
 
+// SSR設定（MicroCMS独自の書き方)
+export const revalidate = 0;
+
 export default async function Blog() {
   let blog = [];
   let error = null;
