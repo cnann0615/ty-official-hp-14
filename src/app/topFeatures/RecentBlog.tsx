@@ -1,7 +1,7 @@
 "use client";
-import { Animation } from "../components/Animation";
-
 import Link from "next/link";
+
+import { Animation } from "../components/Animation";
 
 // トップページのブログ部分
 

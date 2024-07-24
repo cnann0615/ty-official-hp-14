@@ -8,7 +8,7 @@ import { client } from "../../libs/client";
 // SSR設定（MicroCMS独自の書き方)
 export const revalidate = 0;
 
-export default async function Home() {
+export default async function Top() {
   let blog = [];
   let error = null;
 
