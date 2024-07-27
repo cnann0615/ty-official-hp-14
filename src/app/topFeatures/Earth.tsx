@@ -36,8 +36,8 @@ function Earth() {
       antialias: true, //3Dモデルの端を滑らかにする。
       alpha: true, //背景の設定（透明にしたい場合はtrue）
     });
-    renderer.setSize(sizes.width, sizes.height); //ここの記述はお決まり。（意味はよくわからない。）
-    renderer.setPixelRatio(window.devicePixelRatio); //ここの記述はお決まり。（意味はよくわからない。）
+    renderer.setSize(sizes.width, sizes.height); //ここの記述はお決まり。
+    renderer.setPixelRatio(window.devicePixelRatio); //ここの記述はお決まり。
 
     // ライトの設定（この設定がないと映らない３Dモデルがある）
     const light = new THREE.PointLight(0xffffff, 1); //特定の方向からのライト（第１引数：光の色、第２引数：光の強さ）
