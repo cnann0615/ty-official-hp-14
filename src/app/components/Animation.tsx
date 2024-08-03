@@ -12,7 +12,7 @@ export const TimeFadeIn = ({ children, time, direction }: any) => {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    // コンポーネントがマウントされた後、time秒後に isVisibleをtrue に設定
+    // コンポーネントがマウントされた後、time秒後に inViewをtrue に設定
     const timer = setTimeout(() => {
       setInView(true);
     }, time);

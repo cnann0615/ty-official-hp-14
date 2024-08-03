@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 
 // ヘッダーのハンバーガーメニュー
 
 function HeaderHamburger() {
-  const [isOpen, setIsOpen] = useState(false); // ハンバーガーメニューがクリックされたかをStateで管理
+  // ハンバーガーメニューがクリックされたかをStateで管理
+  const [isOpen, setIsOpen] = useState(false);
   return (
     // 画面サイズがlg以上の時は非表示
     <div className="lg:hidden">
@@ -21,7 +22,7 @@ function HeaderHamburger() {
       </button>
       {/* ハンバーガーメニューが押された時にメニューを表示 */}
       {isOpen && (
-        <div className="absolute top-16 right-4 bg-gray-700 text-white shadow-lg rounded-lg py-2 w-48 flex flex-col space-y-2 z-50">
+        <nav className="absolute top-16 right-4 bg-gray-700 text-white shadow-lg rounded-lg py-2 w-48 flex flex-col space-y-2 z-50">
           <Link
             href="/"
             className="px-4 py-2 hover:bg-gray-900"
@@ -57,7 +58,7 @@ function HeaderHamburger() {
           >
             Contact
           </Link>
-        </div>
+        </nav>
       )}
     </div>
   );

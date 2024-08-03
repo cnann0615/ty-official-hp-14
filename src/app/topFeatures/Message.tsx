@@ -1,9 +1,9 @@
 "use client";
-import Earth from "./Earth";
-import { Animation } from "../components/Animation";
-
 import Image from "next/image";
 import Link from "next/link";
+
+import Earth from "./Earth";
+import { Animation } from "../components/Animation";
 
 // トップページのメッセージ部分
 

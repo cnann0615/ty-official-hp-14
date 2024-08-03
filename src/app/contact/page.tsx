@@ -16,14 +16,16 @@ export default function Contact() {
   // EmailJsを使ったメールの送信
   const onSubmit = async (data: Record<string, unknown>) => {
     // EmailJsへの接続
+    // GUIで設定したServiceへの接続
     const serviceId: string =
       process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_SERVICE_ID!;
+    // GUIで設定したTemplateへの接続
     const templateId: string =
       process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_TEMPLATE_ID!;
+    // EmailJSアカウントのPublic Keyへの接続
     const publicId: string =
       process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_ID!;
-    console.log(serviceId);
-    // メールの送信
+    // send関数によってメールを送信する。以下data内の、name, email, messageのデータ内容が、GUI上のTemplateの{{変数}}として、置き換わる。
     try {
       await emailjs.send(serviceId, templateId, data, publicId);
       window.alert("送信しました。");

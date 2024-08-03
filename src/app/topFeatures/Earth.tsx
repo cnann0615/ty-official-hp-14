@@ -5,8 +5,11 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // ３Dモデル
 
 function Earth() {
+  // ３Dモデルを表示するDOM要素をuseRefでもってくる
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
+  // useEffect内に３Dモデルの設定を書くことで、レンダリング時に３Dモデルが生成されるようになる。
+  // Three.jsで３Dモデルを出力するには、以下に定義する、scene, camera, rendererの３つのオブジェクトが最低限必要となる。
   useEffect(() => {
     const canvas = canvasRef.current as HTMLCanvasElement;
 
@@ -15,52 +18,53 @@ function Earth() {
       height: 370,
     };
 
-    // scene
+    // scene（3D空間全体の情報をもつオブジェクト）
     const scene = new THREE.Scene();
 
-    // camera
+    // camera（３Dモデルをどのように画面に映すかを、カメラをのぞいた時のようなイメージで定義できるオブジェクト）
     const camera = new THREE.PerspectiveCamera(
-      85,
-      sizes.width / sizes.height,
-      0.1,
-      1000
+      85, //垂直視野
+      sizes.width / sizes.height, //アスペクト比
+      0.1, //Near（奥行きの手前側）
+      1000 //Far（奥行きの最奥）→NearとFarの間にあるものが画面に映し出される。
     );
-    camera.position.set(0, 0, 2);
+    camera.position.set(0, 0, 2); //カメラ自体の位置（x軸, y軸, z軸）
 
-    // renderer
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvas,
-      antialias: true,
-      alpha: true,
+    // renderer（レンダリング設定）
+    const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
+      canvas: canvas, //useRefでとってきた要素。ここに３Dモデルがレンダリングされる。
+      antialias: true, //3Dモデルの端を滑らかにする。
+      alpha: true, //背景の設定（透明にしたい場合はtrue）
     });
-    renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(sizes.width, sizes.height); //ここの記述はお決まり。
+    renderer.setPixelRatio(window.devicePixelRatio); //ここの記述はお決まり。
 
-    // ライトの設定
-    const light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(0, 1, 1);
-    scene.add(light);
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
+    // ライトの設定（この設定がないと映らない３Dモデルがある）
+    const light = new THREE.PointLight(0xffffff, 1); //特定の方向からのライト（第１引数：光の色、第２引数：光の強さ）
+    light.position.set(0, 1, 1); //sceneから見たライトの位置　（第１引数：x軸、第２引数：y軸、第３引数：z軸）
+    scene.add(light); //sceneにライトを紐付け
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); //全方向からのライト≒モデルそのものの光度（第１引数：光の色、第２引数：光の強さ）
+    scene.add(ambientLight); //sceneにライトを紐付け
 
-    // GLTFモデルのローダー
-    let model: THREE.Object3D<THREE.Object3DEventMap>; // モデルを格納する変数を拡張
+    // GLTFモデルのインポート
+    let model: THREE.Object3D<THREE.Object3DEventMap>; // モデルを格納する変数
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("/models/earth.gltf", (gltf) => {
       model = gltf.scene;
-      model.scale.set(0.14, 0.14, 0.14);
-      scene.add(model);
+      model.scale.set(0.14, 0.14, 0.14); //modelの大きさ（スケール）を設定
+      scene.add(model); //sceneにmodelを紐付け
     });
 
+    // アニメーション
     const tick = () => {
       if (model) {
-        // Y軸周りに毎フレーム回転（数字はスピード）
-        model.rotation.y += 0.0025;
+        // modelを回転させる
+        model.rotation.y += 0.0025; // Y軸周りに毎フレーム回転（数字はスピード）
       }
-      renderer.render(scene, camera);
-      requestAnimationFrame(tick);
+      renderer.render(scene, camera); // 現在のシーンをカメラの視点からレンダリング（描画）（ここの記述はお決まり。）
+      requestAnimationFrame(tick); // ブラウザに次の再描画のフレームでtick関数を呼び出すように要求（ここの記述はお決まり。）
     };
-    tick();
+    tick(); //初回のアニメーションフレームを開始するためにtick関数を一度呼び出す（ここの記述はお決まり。）
   }, []);
 
   return (
