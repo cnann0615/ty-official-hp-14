@@ -11,7 +11,11 @@ function Message() {
   return (
     <div className=" text-gray-100 font-bold mt-10 mb-16 md:mb-24">
       {/* メッセージ１ */}
-      <Animation animation="fadeInUp" rootMargin="-100px">
+      <Animation
+        animation="fadeInUp"
+        rootMargin="-100px"
+        data-testid="animation"
+      >
         <h1 className=" mt-16 md:mt-28 mb-8 md:mb-20 xl:my-28 text-center text-lg sm:text-4xl lg:text-5xl xl:text-7xl ">
           ”人はいつからでも、何にでもなれる。”
         </h1>

@@ -35,7 +35,10 @@ export const ImageSlider = ({ images }: { images: string[] }) => {
   }, [images]);
 
   return (
-    <div className="w-full h-[250px] md:h-[400px] lg:h-[800px]">
+    <div
+      className="w-full h-[250px] md:h-[400px] lg:h-[800px]"
+      data-testid="image-slider"
+    >
       {images.map((image: string, index: number) => (
         <div
           key={index}
