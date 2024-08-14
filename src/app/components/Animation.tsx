@@ -26,6 +26,7 @@ export const TimeFadeIn = ({ children, time, direction }: any) => {
     <div
       className={`${inView ? "opacity-100" : `opacity-0 ${direction === "right" ? "translate-x-[50%]" : "translate-x-[-50%]"}`} 
       duration-[1s]`}
+      data-testid="time-fade-in"
     >
       {children}
     </div>
