@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 
 import Main from "./Main";
 
-describe("Main コンポーネント", () => {
+describe("Mainコンポーネント", () => {
   test("クラッシュせずにレンダリングされる", () => {
     render(<Main />);
   });
