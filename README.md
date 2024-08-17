@@ -41,12 +41,12 @@ IDE：Visual Studio Code
 
 ## サイト構成
 
-・レイアウト （ヘッダー、フッター）
-・Top（トップページ）
-・Profile （自己紹介ページ）
-・Gallery （ギャラリーページ）
-・Blog （ブログページ）
-・Contact （問合せページ）
+・レイアウト （ヘッダー、フッター）<br>
+・Top（トップページ）<br>
+・Profile （自己紹介ページ）<br>
+・Gallery （ギャラリーページ）<br>
+・Blog （ブログページ）<br>
+・Contact （問合せページ）<br>
 
 ## 苦労した点、今後やりたいこと
 
