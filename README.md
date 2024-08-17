@@ -1,38 +1,87 @@
-URL：https://ty-official-hp-14.vercel.app/
+## 概要
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+サービス名：<br>
+Yamada Tetsuya Official （公式ホームページ）<br>
 
-## Getting Started
+URL（ぜひアクセスしてみてください！）：<br>
+https://ty-official-hp-14.vercel.app/<br>
 
-First, run the development server:
+また、Qiitaにて本Webサイトについてさらに詳しく紹介していますので、ご興味ある方はぜひお読みいただけると嬉しいです！<br>
+https://qiita.com/Naoto_eng_7010/items/fbf3bd221abcc632f728<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## きっかけ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+プロジェクト名にもあるTetsuya Yamada(以降、ヤマディー)は、私の高校からの友人です。<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ヤマディーは大学卒業後、某メガベンチャーに入社しましたが、<br>
+2028年LA五輪のラクロス代表を目指すために、1年未満で退社し、カナダに渡り、ラクロスに専念する道を選びました。<br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+彼の行動力と夢に向かって挑戦する姿は、ソフトウェアエンジニアを目指す自分の行動のきっかけにもなりました。<br>
 
-## Learn More
+どうせ何かを作るなら自分の技術力アップだけでなく、誰かのためになるものを作ろうと思い、彼への恩返しも兼ねてWebサイトを作らせてもらうことになりました。<br>
 
-To learn more about Next.js, take a look at the following resources:
+## 開発環境と使用技術
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 開発環境
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+OS：macOS<br>
+IDE：Visual Studio Code
 
-## Deploy on Vercel
+### 使用技術
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+言語：TypeScript<br>
+フレームワーク：Next.js（App Router）<br>
+スタイル：Tailwind CSS
+デプロイ：Vercel<br>
+パッケージ管理ツール：npm<br>
+ソースコード管理：GitHub<br>
+その他：microCMS, EmailJS<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+などなど。。。
+
+## サイト構成
+
+・レイアウト （ヘッダー、フッター）
+・Top（トップページ）
+・Profile （自己紹介ページ）
+・Gallery （ギャラリーページ）
+・Blog （ブログページ）
+・Contact （問合せページ）
+
+## 苦労した点、今後やりたいこと
+
+＜苦労した点、工夫した点＞<br>
+
+- ３Dモデル
+  - トップページに表示されている地球の３Dモデル（回転してるやつ）の実装に一番苦労しました。<br>
+    Three.jsというライブラリを使い、useEffect内で３Dモデルを表示するための設定（scene, camera, rendererやら）をするわけなのですが、それぞれの設定の意味や、設定する値によって３Dモデルの見え方がどう変わるかなど、なかなか理解できず苦しみました。<br>
+    また、３Dモデルは、見えている部分（地球の部分）だけでなく、何もない空間部分も要素として扱われるため、レスポンシブ対応させる際に、その空間部分の影響で思った通りの表示ができなかったりと苦労しました。<br>
+    色々値を変えながら手探りでうまくできた部分が多かったので、今後は、もっとしっかり学んで使いこなせるようになりたいです。<br>
+
+＜工夫した点＞<br>
+
+- 外部サービスの利用（microCMSと EmailJS）
+  - microCMS - microCMSを利用することで、ヤマディー（友人）自身が、ブログ投稿を気軽かつ簡単に行えるようにしました。<br>
+    また、SSRで実装したため、ブログ投稿した際は、再デプロイせずとも、瞬時にサイトに反映されるような仕組みにすることができました。
+  - EmailJS
+    - EmailJSを使用することで「フロントエンドから簡単にメールを飛ばす方法」を知ることができました。
+    - 問合せページや、会員登録ページなど、Web開発の中でメールを使用する場面は多く存在すると思うので、今回EmailJSという１つの方法を知れたことは将来も役立つと思ってます。
+
+今回、外部サービスを利用しみて、その便利さに驚きました。<br>
+ブログ投稿やメール送信等、本来バックエンドでサーバを立てて実装する必要がある部分を、外部サービス上の画面操作だけで完結できるのは、とても便利だと感じました。<br>
+バックエンドの知識がなくても導入しやすく、開発の手間も大幅に削減できるため、小さいプロジェクトなどでは積極的に使っていくべきだと感じました。<br>
+
+## 最後に
+
+最後までお読みいただきありがとうございました。<br>
+
+今回の開発を通して、初めて、「誰かのために開発する楽しさ、やりがい」を感じることができました。<br>
+
+誰かのために開発をすると、その人が喜んでいる顔を想像したり、その人の役に立ちたい！という思いだったりと、開発のモチベーションの元となる要因が増えるなあと、身をもって感じました。<br>
+それと同時に、将来は、多くの人が使うサービスの開発に携わり、サービスを通して、暮らしを便利にしたり、日常生活に喜びを与えられたりできるエンジニアになりたいと感じました。<br>
+
+今後もアウトプットをたくさんし、技術レベルを上げていきたいと思います！！！<br>
+
+ありがとうございました！
+
+---
