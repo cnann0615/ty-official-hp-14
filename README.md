@@ -24,9 +24,9 @@ IDE：Visual Studio Code
 
 言語：TypeScript<br>
 フレームワーク：Next.js（App Router）<br>
-スタイル：Tailwind CSS
+スタイル：Tailwind CSS<br>
 デプロイ：Vercel<br>
-テスト：JEST, React Testing Library
+テスト：JEST, React Testing Library ←実施途中<br>
 パッケージ管理ツール：npm<br>
 ソースコード管理：GitHub<br>
 その他：microCMS, EmailJS<br>
