@@ -18,7 +18,7 @@ https://qiita.com/Naoto_eng_7010/items/fbf3bd221abcc632f728<br>
 ### 開発環境
 
 OS：macOS<br>
-IDE：Visual Studio Code
+IDE：Visual Studio Code<br>
 
 ### 使用技術
 
