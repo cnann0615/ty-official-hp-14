@@ -20,7 +20,7 @@ export default async function Blog() {
   }
 
   return (
-    <div className="container mx-auto p-5">
+    <div className="container mx-auto p-5 mb-16">
       {/* タイトル */}
       <h1 className="m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
         🥍 Blog 🥍
