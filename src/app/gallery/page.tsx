@@ -22,7 +22,7 @@ export default async function Gallery() {
   return (
     <div className="container p-5 mx-auto mb-48">
       {/* タイトル */}
-      <h1 className="m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
+      <h1 className="font-bold text-gray-100 text-3xl lg:text-5xl italic m-2 md:m-4 ">
         🥍 Gallery 🥍
       </h1>
       {error ? (

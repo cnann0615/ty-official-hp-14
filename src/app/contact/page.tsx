@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <main className=" w-10/12 mt-5 mb-10 bg-gray-200 border-4 text-black border-black rounded-xl max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+    <main className=" bg-gray-200 border-4 text-black border-black rounded-xl w-10/12 mt-5 mb-10 max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
       {/* タイトル */}
       <h1 className="text-3xl font-bold mb-6 text-center">お問い合わせ</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block text-lg font-bold text-gray-700 "
+            className="text-lg font-bold text-gray-700 block "
           >
             名前
           </label>
@@ -55,7 +55,7 @@ export default function Contact() {
             {...register("name", { required: "氏名は必須です。" })}
             id="name"
             name="name"
-            className=" p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block p-2 mt-1 w-full "
           />
           {/* バリデーションエラー時のメッセージ */}
           <p className="text-red-500 text-xs font-bold ">
@@ -66,7 +66,7 @@ export default function Contact() {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="block text-lg font-bold text-gray-700"
+            className=" text-lg font-bold text-gray-700 block"
           >
             メールアドレス
           </label>
@@ -83,7 +83,7 @@ export default function Contact() {
             })}
             id="email"
             name="email"
-            className=" p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block p-2 mt-1 w-full "
           />
           {/* バリデーションエラー時のメッセージ */}
           <p className="text-red-500 text-xs font-bold ">
@@ -94,7 +94,7 @@ export default function Contact() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="block text-lg font-bold text-gray-700"
+            className=" text-lg font-bold text-gray-700 block"
           >
             問い合わせ内容
           </label>
@@ -106,7 +106,7 @@ export default function Contact() {
             })}
             name="message"
             rows={14}
-            className=" p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block p-2 mt-1 w-full "
           />
           {/* バリデーションエラー時のメッセージ */}
           <p className="text-red-500 text-xs font-bold ">
@@ -120,7 +120,7 @@ export default function Contact() {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 inline-flex items-center px-4 py-2 "
           >
             送信
           </button>

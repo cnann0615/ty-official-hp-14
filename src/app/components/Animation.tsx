@@ -1,6 +1,6 @@
 "use client";
-import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 // アニメーション
 

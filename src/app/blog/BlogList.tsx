@@ -35,7 +35,7 @@ export default function BlogList({ blog }: any) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-colos-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-colos-3 lg:grid-cols-4 xl:grid-cols-5 ">
         {/* ブログ情報を展開 */}
         {selectedBlogPosts.map((blog: any, index: number) => (
           <div key={blog.id}>
@@ -43,7 +43,7 @@ export default function BlogList({ blog }: any) {
               animation={index < 5 ? "bounceInRight" : "bounceInLeft"}
               rootMargin="-100px"
             >
-              <article className="bg-yellow-300 text-black shadow-lg rounded-lg overflow-hidden h-auto border-4 border-black hover:border-yellow-500">
+              <article className="bg-yellow-300 text-black shadow-lg rounded-lg border-4 border-black hover:border-yellow-500 overflow-hidden h-auto ">
                 {/* 個々のブログへのリンク */}
                 <Link href={`blog/${blog.id}`}>
                   <div className="relative">

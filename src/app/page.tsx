@@ -22,7 +22,7 @@ export default async function Top() {
   }
 
   return (
-    <main className="px-[2.5%] md:px-[5%] mb-24">
+    <main className="px-[2.5%] mb-24 md:px-[5%]">
       <Main />
       <Message />
       {error ? (

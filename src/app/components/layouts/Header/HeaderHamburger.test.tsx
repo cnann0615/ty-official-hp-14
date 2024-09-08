@@ -1,7 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import HeaderHamburger from "./HeaderHamburger";
 import "@testing-library/jest-dom";
+
+import HeaderHamburger from "./HeaderHamburger";
 
 describe("HeaderHamburger", () => {
   test("クラッシュせずにレンダリングされる", () => {

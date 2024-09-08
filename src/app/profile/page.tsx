@@ -1,7 +1,7 @@
 "use client";
-import { Animation, TimeFadeIn } from "../components/Animation";
-
 import Image from "next/image";
+
+import { Animation, TimeFadeIn } from "../components/Animation";
 
 // プロフィールページ
 
@@ -11,12 +11,12 @@ export default function Profile() {
       {/* タイトル */}
       <div className="text-center mt-12 mb-16 md:mb-24">
         {/* 画面サイズがmd以上の時 */}
-        <h1 className=" hidden md:block text-4xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 ">
+        <h1 className=" text-4xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 hidden md:block ">
           2028 LAオリンピックを目指すラクロス選手のカナダ挑戦🇨🇦
         </h1>
 
         {/* 画面サイズがmd以下の時 */}
-        <h1 className="md:hidden text-xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 ">
+        <h1 className="text-xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 md:hidden ">
           2028 LAオリンピックを目指す
           <br />
           ラクロス選手のカナダ挑戦🇨🇦
@@ -24,7 +24,7 @@ export default function Profile() {
       </div>
 
       {/* プロフィール画像＋プロフィール */}
-      <div className="flex flex-col xl:flex-row xl:space-x-8 mb-28 text-md md:text-xl">
+      <div className="text-md md:text-xl flex flex-col xl:flex-row xl:space-x-8 mb-28 ">
         {/* プロフィール画像 */}
         <div className="xl:w-1/2">
           <TimeFadeIn time="500" direction="left">
@@ -40,25 +40,25 @@ export default function Profile() {
           </TimeFadeIn>
         </div>
         {/* プロフィール */}
-        <div className="xl:w-1/2 mt-8 xl:mt-0 text-left ">
+        <div className="text-left mt-8 xl:mt-0 xl:w-1/2">
           <TimeFadeIn time="500" direction="right">
             {/* 画面サイズがlg以上の時 */}
-            <table className=" hidden lg:block table-auto w-full border-collapse ">
+            <table className="border-collapse hidden lg:block table-auto w-full ">
               <tbody>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">名前</th>
+                  <th className="text-yellow-400 px-4 py-6 ">名前</th>
                   <td className=" px-4 py-6">山田　哲也</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">生年月日</th>
+                  <th className=" text-yellow-400 px-4 py-6">生年月日</th>
                   <td className=" px-4 py-6">2000年11月20日</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">血液型</th>
+                  <th className=" text-yellow-400 px-4 py-6">血液型</th>
                   <td className=" px-4 py-6">B型</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">現所属</th>
+                  <th className=" text-yellow-400 px-4 py-6">現所属</th>
                   <td className=" px-4 py-6">
                     <p className="font-bold text-yellow-300">日本</p>
                     <p>FALCONS　LACROSSE　CLUB</p>
@@ -67,19 +67,19 @@ export default function Profile() {
                   </td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">ポジション</th>
+                  <th className=" text-yellow-400 px-4 py-6">ポジション</th>
                   <td className=" px-4 py-6">フォワード</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">出身地</th>
+                  <th className=" text-yellow-400 px-4 py-6">出身地</th>
                   <td className=" px-4 py-6">東京都　江戸川区</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">身長 / 体重</th>
+                  <th className=" text-yellow-400 px-4 py-6">身長 / 体重</th>
                   <td className=" px-4 py-6">188cm / 100kg</td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">出身校</th>
+                  <th className=" text-yellow-400 px-4 py-6">出身校</th>
                   <td className=" px-4 py-6">
                     <p className="font-bold text-yellow-300">中学</p>
                     <p className="pb-3">江戸川区立　篠崎第二中学校</p>
@@ -90,7 +90,7 @@ export default function Profile() {
                   </td>
                 </tr>
                 <tr>
-                  <th className=" px-4 py-6 text-yellow-400">戦績</th>
+                  <th className=" text-yellow-400 px-4 py-6">戦績</th>
                   <td className=" px-4 py-6">
                     <p className="font-bold text-yellow-300">大学</p>
                     <p>関東学生リーグ部1部</p>
@@ -104,27 +104,27 @@ export default function Profile() {
             </table>
 
             {/* 画面サイズがlg以下の時 */}
-            <div className=" lg:hidden table-auto w-full border-collapse ">
+            <div className="border-collapse table-auto w-full lg:hidden ">
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   名前
                 </h3>
                 <p className=" px-4 pb-6">山田　哲也</p>
               </div>
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   生年月日
                 </h3>
                 <p className=" px-4 pb-6">2000年11月20日</p>
               </div>
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   血液型
                 </h3>
                 <p className=" px-4 pb-6">B型</p>
               </div>
               <div>
-                <h3 className=" pb-3 px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0 pb-3">
                   現所属
                 </h3>
                 <p className="font-bold text-yellow-300 px-4 pb-3">日本</p>
@@ -133,26 +133,26 @@ export default function Profile() {
                 <p className="px-4 pb-6">Hamilton　Sr.B　Bengals</p>
               </div>
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   ポジション
                 </h3>
                 <p className=" px-4 pb-6">フォワード</p>
               </div>
 
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   出身地
                 </h3>
                 <p className=" px-4 pb-6">東京都　江戸川区</p>
               </div>
               <div>
-                <h3 className=" px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0">
                   身長 / 体重
                 </h3>
                 <p className=" px-4 pb-6">188cm / 100kg</p>
               </div>
               <div>
-                <h3 className=" pb-3 px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0 pb-3">
                   出身校
                 </h3>
                 <p className=" font-bold text-yellow-300 px-4 pb-3">中学</p>
@@ -166,7 +166,7 @@ export default function Profile() {
               </div>
 
               <div>
-                <h3 className=" pb-3 px-4 py-0 text-yellow-400 font-bold underline">
+                <h3 className=" text-yellow-400 font-bold underline px-4 py-0 pb-3">
                   戦績
                 </h3>
                 <p className=" font-bold text-yellow-300 px-4 pb-3">大学</p>
@@ -186,11 +186,11 @@ export default function Profile() {
 
       {/* メッセージ */}
       <div
-        className="space-y-8 text-center text-lg md:text-2xl"
+        className="text-lg md:text-2xl space-y-8 text-center "
         style={{ lineHeight: "2em" }}
       >
         {/* タイトル */}
-        <h1 className=" text-3xl md:text-5xl font-bold my-20 text-yellow-400">
+        <h1 className="text-yellow-400 font-bold text-3xl md:text-5xl my-20 ">
           キッカケ
         </h1>
 
