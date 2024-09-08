@@ -1,5 +1,6 @@
-import { client } from "../../../../libs/client";
 import Link from "next/link";
+
+import { client } from "../../../../libs/client";
 import Contents from "./Contents";
 
 // 個々のギャラリー
@@ -34,7 +35,7 @@ export default async function photo(context: any) {
   return (
     <div className="mx-auto my-8 p-6 max-w-4xl">
       {/* ギャラリー一覧へのリンク */}
-      <button className="py-1 px-2 mb-2 rounded-md bg-black text-white font-bold hover:bg-yellow-500 hover:text-black">
+      <button className="bg-black text-white font-bold hover:bg-yellow-500 hover:text-black rounded-md py-1 px-2 mb-2 ">
         <Link href={"/gallery"}>Gallery →</Link>
       </button>
       {error ? (

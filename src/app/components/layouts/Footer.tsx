@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="bg-violet-900 text-white py-8">
       <div className="px-[2.5%] md:px-[5%] ">
-        <div className="flex gap-28 md:gap-40 px-8">
+        <div className="flex px-8 gap-28 md:gap-40">
           {/* メニュー */}
           <div>
             <h3 className="text-xl underline decoration-yellow-500 mb-4">

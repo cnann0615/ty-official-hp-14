@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import "animate.css";
 
 import "./globals.css";
 import Header from "./components/layouts/Header/Header";
 import Footer from "./components/layouts/Footer";
-import "animate.css";
 
 export const metadata: Metadata = {
   title: "Yamada Tetsuya Official",

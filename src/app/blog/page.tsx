@@ -22,7 +22,7 @@ export default async function Blog() {
   return (
     <div className="container mx-auto p-5 mb-16">
       {/* タイトル */}
-      <h1 className="m-2 md:m-4 font-bold text-gray-100 text-3xl lg:text-5xl italic">
+      <h1 className="font-bold text-gray-100 text-3xl lg:text-5xl italic m-2 md:m-4 ">
         🥍 Blog 🥍
       </h1>
       {error ? (

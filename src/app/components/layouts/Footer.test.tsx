@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import Footer from "/Users/naoto/Library/Mobile Documents/com~apple~CloudDocs/Engineering/Application/ty-official-hp-14/src/app/components/layouts/Footer";
 import "@testing-library/jest-dom";
+
+import Footer from "./Footer";
 
 describe("Footer コンポーネント", () => {
   test("クラッシュせずにレンダリングされる", () => {

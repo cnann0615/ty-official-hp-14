@@ -1,6 +1,7 @@
 "use client";
-import { formatDate } from "@/app/topFeatures/RecentBlog";
 import React from "react";
+
+import { formatDate } from "@/app/topFeatures/RecentBlog";
 
 // 画像表示部分
 
@@ -10,7 +11,7 @@ function Contents({ blog }: any) {
       <img
         src={blog.photo.url}
         alt={blog.title}
-        className="w-auto h-auto mx-auto border-4 border-black"
+        className="border-4 border-black w-auto h-auto mx-auto "
       />
       {/* 日付をYYYY/MM/DDで表示 */}
       <p className="text-white text-end">

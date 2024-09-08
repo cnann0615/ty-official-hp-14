@@ -34,7 +34,7 @@ function ImagesList({ blog }: any) {
 
   return (
     <>
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
+      <div className="grid gap-1 grid-cols-3 md:grid-cols-4 lg:grid-cols-6 ">
         {/* ブログ情報を展開 */}
         {selectedBlogPosts.map((blog: any) => (
           // ブログの画像を表示
@@ -44,7 +44,7 @@ function ImagesList({ blog }: any) {
               <img
                 src={blog.photo.url}
                 alt={blog.title}
-                className="object-cover w-full h-full aspect-square border-4 border-black hover:border-yellow-500 "
+                className="border-4 border-black hover:border-yellow-500 object-cover w-full h-full aspect-square "
               />
             </Link>
           </div>

@@ -7,7 +7,7 @@ import HeaderHamburger from "./HeaderHamburger";
 
 function Header() {
   return (
-    <header className="text-black hadow-md">
+    <header className="text-black shadow-md">
       <div className="container mx-auto px-3 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           {/* ロゴ１ */}
@@ -16,7 +16,7 @@ function Header() {
             alt="teamIcon"
             width={100}
             height={100}
-            className="hidden lg:block w-24 h-24"
+            className="w-24 h-24 hidden lg:block "
           />
           {/* ロゴ２ */}
           <Image
@@ -24,7 +24,7 @@ function Header() {
             alt="teamIcon"
             width={100}
             height={100}
-            className="hidden lg:block w-24 h-24"
+            className="w-24 h-24 hidden lg:block"
           />
           {/* メインタイトル */}
           <Link
@@ -35,7 +35,7 @@ function Header() {
           </Link>
         </div>
         {/* メニューバー（画面サイズがlg以上の時) */}
-        <nav className="hidden lg:flex space-x-8">
+        <nav className="space-x-8 hidden lg:flex ">
           <Link
             href="/"
             className="hover:underline underline-offset-8 decoration-yellow-500 text-xl xl:text-3xl font-bold"
