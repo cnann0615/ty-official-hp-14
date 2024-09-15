@@ -9,8 +9,7 @@ const ITEMS_PER_PAGE = 18;
 
 // 親コンポーネントからブログ情報を取得
 function ImagesList({ blog }: any) {
-  // ページネーション関連
-
+  // ページネーション関連//////////////////////////////
   // 現在のページをStateで管理（初期値は１）
   const [currentPage, setCurrentPage] = useState(1);
 

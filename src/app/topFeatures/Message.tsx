@@ -90,26 +90,24 @@ function Message() {
               {/* 画像サイズがmd以上の時 */}
               <div className="relative hidden md:block ">
                 <Link href="/gallery" className="relative inline-block">
-                  <div className="relative">
-                    <Image
-                      src="/images/top/img7.jpeg"
-                      alt="Athlete"
-                      width={400}
-                      height={300}
-                      className="rounded-xl border-4 border-black rotate-12 absolute top-0 left-0"
-                    />
-                    <div className="bg-black rounded-xl bg-opacity-60 opacity-100 rotate-12 w-[400px] h-[493px] absolute top-0 left-0 "></div>
-                    <Image
-                      src="/images/top/img8.jpeg"
-                      alt="Athlete"
-                      width={400}
-                      height={300}
-                      className="rounded-xl border-4 border-black -rotate-12"
-                    />
-                    {/* ホバーされた時に薄暗くするための要素 */}
-                    <div className="bg-black rounded-xl -rotate-12 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center w-[400px] h-[596px] absolute top-0 left-0 z-20">
-                      <h2 className=" text-5xl rotate-12 ">Gallery</h2>
-                    </div>
+                  <Image
+                    src="/images/top/img7.jpeg"
+                    alt="Athlete"
+                    width={400}
+                    height={300}
+                    className="rounded-xl border-4 border-black rotate-12 absolute top-0 left-0"
+                  />
+                  <div className="bg-black rounded-xl bg-opacity-60 opacity-100 rotate-12 w-[400px] h-[493px] absolute top-0 left-0 "></div>
+                  <Image
+                    src="/images/top/img8.jpeg"
+                    alt="Athlete"
+                    width={400}
+                    height={300}
+                    className="rounded-xl border-4 border-black -rotate-12"
+                  />
+                  {/* ホバーされた時に薄暗くするための要素 */}
+                  <div className="bg-black rounded-xl -rotate-12 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center w-[400px] h-[596px] absolute top-0 left-0 z-20">
+                    <h2 className=" text-5xl rotate-12 ">Gallery</h2>
                   </div>
                 </Link>
               </div>

@@ -10,15 +10,9 @@ export default function Profile() {
     <div className="container mx-auto px-4 mb-28">
       {/* タイトル */}
       <div className="text-center mt-12 mb-16 md:mb-24">
-        {/* 画面サイズがmd以上の時 */}
-        <h1 className=" text-4xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 hidden md:block ">
-          2028 LAオリンピックを目指すラクロス選手のカナダ挑戦🇨🇦
-        </h1>
-
-        {/* 画面サイズがmd以下の時 */}
-        <h1 className="text-xl font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 md:hidden ">
+        <h1 className="font-bold underline underline-offset-4 decoration-yellow-500 decoration-4 text-xl md:text-4xl">
           2028 LAオリンピックを目指す
-          <br />
+          <br className="md:hidden" />
           ラクロス選手のカナダ挑戦🇨🇦
         </h1>
       </div>
