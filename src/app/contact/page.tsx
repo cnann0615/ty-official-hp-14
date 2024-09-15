@@ -13,7 +13,7 @@ export default function Contact() {
     reset,
   } = useForm({ mode: "onSubmit" });
 
-  // EmailJsを使ったメールの送信
+  // EmailJsを使ったメールの送信/////////////////////////////////
   const onSubmit = async (data: Record<string, unknown>) => {
     // EmailJsへの接続
     // GUIで設定したServiceへの接続
