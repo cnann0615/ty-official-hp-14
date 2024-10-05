@@ -3,7 +3,7 @@ import ImagesList from "./ImagesList";
 
 // ギャラリーページ
 
-// SSR設定（MicroCMS独自の書き方)
+// SSR設定
 export const revalidate = 0;
 
 export default async function Gallery() {
